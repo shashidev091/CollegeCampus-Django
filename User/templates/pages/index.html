@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <style>
+    /* Lemon color theme */
+    body {
+      background-color: #f5f9f7;  /* Light lemon yellow */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2 {
+      color: #fbb034;  /* Sunny yellow */
+      margin: 1em 0;
+      text-align: center;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 1em 0;
+    }
+
+    .search-input {
+      padding: 10px;
+      border: 1px solid #fbb034;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 50%;
+    }
+
+    .search-button {
+      background-color: #fbb034;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .college-results {
+      margin: 1em 0;
+      padding: 10px;
+      border: 1px solid #fbb034;
+      border-radius: 5px;
+    }
+
+    .college-result {
+      margin: 10px 0;
+    }
+
+    .college-name {
+      font-weight: bold;
+    }
+
+    .college-details {
+      font-size: 0.8em;
+      color: #808080;  /* Light gray */
+    }
+  </style>
+</head>
+<body>
+  <h1>College Search - Find Your Perfect Fit!</h1>
+  <div class="search-bar">
+    <input type="text" class="search-input" placeholder="Enter college name or keyword">
+    <button class="search-button">Search</button>
+  </div>
+
+  <div class="college-results">
+    <div class="college-result">
+      <h2 class="college-name">University of Sunshine</h2>
+      <p class="college-details">A prestigious institution known for its strong academics and vibrant campus life.</p>
+    </div>
+  </div>
+
+  <div class="college-list">
+    <ol>
+      {% for college in colleges %}
+        <li>{{college}}</li>
+      {% endfor %}
+    </ol>
+  </div>
+  </body>
+</html>
