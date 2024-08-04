@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "play-write"; /* Give your font a name */
+  src: url("../fonts/PlaywritePL-VariableFont_wght.ttf"); /* Path to your font file */
+}
+
+.play-write {
+  font-family: "play-write";
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.author-name {
+  text-decoration: underline;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  font-size: x-small;
+  margin-right: -3rem;
+}

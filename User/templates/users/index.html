@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{title}}{% endblock %}
+{% block body %}
+  <h4>Filters</h4>
+  <p>Filters give power to the template to add special functions while interpolations</p>
+  <code>
+    {{title|title}}
+  </code>
+  <h5>Tags</h5>
+  <p>Tags are used to use python features of blocks in templates</p>
+  <code>
+    <ol>
+    {% for name in colleges %}
+      <li>{{name}}</li>  
+    {% endfor %}
+    </ol>
+  </code>
+  <h4 style="font-family: 'play-write';">Link tags (URL)</h4>
+  <code>
+    <a href="{% url 'get_users' %}">get users</a> <br>
+    {#<a href="{% url 'dynamic_path_int' 3 %}">get march month</a><br>#}
+    <img src="{% static 'users/images/funny_cat.gif'%}" alt="funny cat">
+    <br>
+    {#<a href="{{ user.get_absolute_url }}">test absolute url</a>#}
+  </code>
+{% endblock %}
