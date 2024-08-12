@@ -5,10 +5,21 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container-center">
-        <div>
-            <h4 class="play-write" style="margin-bottom: 0;">Find your future. Search colleges that ignite your passions on collegeCampus.</h4>
-            <p class="play-write author-name">-{{author}}</p>
+    <div class="container justify-content-between">
+        <div class="row">
+            <div class="col">
+                <div class="container-center">
+                    <div>
+                        <h4 class="play-write" style="margin-bottom: 0;">Find your future. Search colleges that ignite your passions on collegeCampus.</h4>
+                        <p class="play-write author-name">-{{author}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-bottom">
+            <div class="row justify-content-center mb-3">
+                <img src="{% static 'images/svg/graduation.svg'%}" alt="">
+            </div>
         </div>
     </div>
 {% endblock %}
